@@ -1,0 +1,115 @@
+Disassembling...
+Parsing AST...
+GetDebug...
+Contents of the .debug_line section:
+
+CU: ./case1.c:
+File name                            Line number    Starting address    View    Stmt
+case1.c                                        5              0x11c9               x
+case1.c                                        5              0x11d5               x
+case1.c                                        6              0x11e4               x
+case1.c                                        8              0x11eb               x
+case1.c                                        9              0x11fc               x
+case1.c                                       10              0x120d               x
+case1.c                                       10              0x1219               x
+case1.c                                       11              0x121c               x
+case1.c                                       11              0x1228               x
+case1.c                                       12              0x122b               x
+case1.c                                       12              0x1232               x
+case1.c                                       14              0x1234               x
+case1.c                                       14              0x123b               x
+case1.c                                       14              0x1241               x
+case1.c                                       14              0x1243               x
+case1.c                                       14              0x1247               x
+case1.c                                       14              0x124b               x
+case1.c                                       14              0x1253               x
+case1.c                                       14              0x125d               x
+case1.c                                       14              0x1267               x
+case1.c                                       16              0x126b               x
+case1.c                                       16              0x1273               x
+case1.c                                       12              0x1277               x
+case1.c                                       12              0x127b               x
+case1.c                                       12              0x1281               x
+case1.c                                       18              0x1286               x
+case1.c                                       19              0x129c               x
+case1.c                                       20              0x12a8               x
+case1.c                                       21              0x12ad               x
+case1.c                                       21              0x12c3               x
+
+
+
+Get line2ins...
+Pairing...
+int main() {
+    int i, j, k, TLen, PLen, count = 0;
+    char T[50], P[10];
+    gets(T);
+    gets(P);
+    TLen = strlen(T);
+    PLen = strlen(P);
+    for (i = 0; i <= TLen - PLen; i++) {
+        for (j = 0 , k = i; j < PLen && P[j] == T[k]; j++ , k++)
+            ;
+        if (j == PLen)
+            count++;
+    }
+    printf("%d\n", count);
+    system("pause");
+    return 0;
+}
+../test/example/case1/case1.c:6:5
+../test/example/case1/case1.c:7:5
+../test/example/case1/case1.c:8:5
+../test/example/case1/case1.c:9:5
+../test/example/case1/case1.c:10:5
+../test/example/case1/case1.c:11:5
+../test/example/case1/case1.c:12:5
+../test/example/case1/case1.c:12:9
+../test/example/case1/case1.c:12:13
+../test/example/case1/case1.c:12:26
+../test/example/case1/case1.c:13:5
+../test/example/case1/case1.c:14:9
+../test/example/case1/case1.c:14:13
+../test/example/case1/case1.c:14:21
+../test/example/case1/case1.c:14:40
+../test/example/case1/case1.c:15:13
+../test/example/case1/case1.c:16:9
+../test/example/case1/case1.c:18:5
+../test/example/case1/case1.c:19:5
+../test/example/case1/case1.c:20:5
+
+0x11c9(endbr64) 0x11cd(push) 0x11ce(mov) 0x11d1(sub) 0x11d5(mov) 0x11de(mov) 0x11e2(xor) 
+
+IntegerLiteral DeclStmt 
+0x11e4(mov) 
+
+DeclRefExpr ImplicitCastExpr DeclRefExpr ImplicitCastExpr CallExpr 
+0x11eb(lea) 0x11ef(mov) 0x11f2(mov) 0x11f7(call) 0x11fc(lea) 0x1200(mov) 0x1203(mov) 0x1208(call) 
+
+DeclRefExpr DeclRefExpr ImplicitCastExpr DeclRefExpr ImplicitCastExpr CallExpr = 
+0x120d(lea) 0x1211(mov) 0x1214(call) 0x1219(mov) 
+
+DeclRefExpr DeclRefExpr ImplicitCastExpr DeclRefExpr ImplicitCastExpr CallExpr = 
+0x121c(lea) 0x1220(mov) 0x1223(call) 0x1228(mov) 
+
+DeclRefExpr ++ 
+0x122b(mov) 0x1232(jmp) 0x1277(add) 0x127b(mov) 0x127e(sub) 0x1281(cmp) 0x1284(jle) 
+
+DeclRefExpr ++ DeclRefExpr ++ , 
+0x1234(mov) 0x123b(mov) 0x123e(mov) 0x1241(jmp) 0x1243(add) 0x1247(add) 0x124b(mov) 0x124e(cmp) 0x1251(jge) 0x1253(mov) 0x1256(cdqe) 0x1258(movzx) 0x125d(mov) 0x1260(cdqe) 0x1262(movzx) 0x1267(cmp) 0x1269(je) 
+
+DeclRefExpr ImplicitCastExpr DeclRefExpr ImplicitCastExpr == DeclRefExpr ++ IfStmt 
+0x126b(mov) 0x126e(cmp) 0x1271(jne) 0x1273(add) 
+
+DeclRefExpr ImplicitCastExpr StringLiteral ImplicitCastExpr DeclRefExpr ImplicitCastExpr CallExpr 
+0x1286(mov) 0x1289(mov) 0x128b(lea) 0x1292(mov) 0x1297(call) 
+
+DeclRefExpr ImplicitCastExpr StringLiteral ImplicitCastExpr CallExpr 
+0x129c(lea) 0x12a3(call) 
+
+IntegerLiteral ReturnStmt 
+0x12a8(mov) 
+
+
+0x12ad(mov) 0x12b1(xor) 0x12ba(je) 0x12bc(call) 0x12c1(leave) 0x12c2(ret) 
+

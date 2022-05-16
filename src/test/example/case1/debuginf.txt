@@ -1,0 +1,39 @@
+
+case1-x64.o:     file format elf64-x86-64
+
+Contents of the .debug_line section:
+
+CU: ./case1.c:
+File name                            Line number    Starting address    View    Stmt
+case1.c                                        5              0x11c9               x
+case1.c                                        5              0x11d5               x
+case1.c                                        6              0x11e4               x
+case1.c                                        8              0x11eb               x
+case1.c                                        9              0x11fc               x
+case1.c                                       10              0x120d               x
+case1.c                                       10              0x1219               x
+case1.c                                       11              0x121c               x
+case1.c                                       11              0x1228               x
+case1.c                                       12              0x122b               x
+case1.c                                       12              0x1232               x
+case1.c                                       14              0x1234               x
+case1.c                                       14              0x123b               x
+case1.c                                       14              0x1241               x
+case1.c                                       14              0x1243               x
+case1.c                                       14              0x1247               x
+case1.c                                       14              0x124b               x
+case1.c                                       14              0x1253               x
+case1.c                                       14              0x125d               x
+case1.c                                       14              0x1267               x
+case1.c                                       16              0x126b               x
+case1.c                                       16              0x1273               x
+case1.c                                       12              0x1277               x
+case1.c                                       12              0x127b               x
+case1.c                                       12              0x1281               x
+case1.c                                       18              0x1286               x
+case1.c                                       19              0x129c               x
+case1.c                                       20              0x12a8               x
+case1.c                                       21              0x12ad               x
+case1.c                                       21              0x12c3               x
+
+
