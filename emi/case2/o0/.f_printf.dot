@@ -1,0 +1,5 @@
+digraph "CFG for 'f_printf' function" {
+	label="CFG for 'f_printf' function";
+
+	Node0x559998523de0 [shape=record,label="{entry:\l  %p0.addr = alloca i32, align 4\l  store i32 %p0, i32* %p0.addr, align 4\l  %0 = load i32, i32* %p0.addr, align 4\l  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3\l... x i8]* @.str, i64 0, i64 0), i32 %0)\l  ret void\l}"];
+}

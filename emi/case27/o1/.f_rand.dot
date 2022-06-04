@@ -1,0 +1,5 @@
+digraph "CFG for 'f_rand' function" {
+	label="CFG for 'f_rand' function";
+
+	Node0x560642d67940 [shape=record,label="{entry:\l  %call = tail call i32 (...) @rand() #5\l  ret i32 %call\l}"];
+}

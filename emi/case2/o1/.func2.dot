@@ -1,0 +1,5 @@
+digraph "CFG for 'func2' function" {
+	label="CFG for 'func2' function";
+
+	Node0x5639da861b20 [shape=record,label="{entry:\l  %call = tail call i32 @f_scanf_nop()\l  %call1 = tail call i32 @f_rand()\l  %call2 = tail call i32 @f_scanf_nop()\l  %call3 = tail call i32 @f_rand()\l  %call4 = tail call i32 @f_rand()\l  %mul = mul nsw i32 %p0, -128\l  %sub = mul i32 %p0, 129\l  %sub5 = add i32 %sub, 969\l  %sub6 = add i32 %sub5, %p2\l  %add = sub i32 %sub6, %call3\l  %sub7 = sub i32 %add, %call4\l  %mul8 = mul nsw i32 %sub7, %p0\l  %sub9 = sub nsw i32 %mul, %call4\l  %mul10 = mul nsw i32 %sub9, %mul\l  %sub11 = add nsw i32 %mul10, 969\l  tail call void @f_printf(i32 %sub11)\l  %sub12 = sub nsw i32 %call3, %call\l  %mul13 = mul nsw i32 %sub12, %p2\l  %sub14 = sub nsw i32 %mul13, %call2\l  %mul15 = mul nsw i32 %sub14, %p1\l  %sub16 = sub nsw i32 %mul15, %call2\l  tail call void @f_printf(i32 %sub16)\l  %add17 = add nsw i32 %mul8, -969\l  tail call void @f_printf(i32 %add17)\l  %0 = add i32 %call3, %mul\l  %sub19 = sub i32 %sub16, %0\l  ret i32 %sub19\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'f_printf' function" {
+	label="CFG for 'f_printf' function";
+
+	Node0x55d544736070 [shape=record,label="{entry:\l  %call = tail call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x\l... i8], [3 x i8]* @.str, i64 0, i64 0), i32 %p0)\l  ret void\l}"];
+}

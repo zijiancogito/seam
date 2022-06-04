@@ -1,0 +1,5 @@
+digraph "CFG for 'func3' function" {
+	label="CFG for 'func3' function";
+
+	Node0x563884860610 [shape=record,label="{entry:\l  %call = tail call i32 @f_rand()\l  %call1 = tail call i32 @f_rand()\l  %call2 = tail call i32 @f_rand()\l  %call3 = tail call i32 @f_rand()\l  %call4 = tail call i32 @f_scanf_nop()\l  %add = add nsw i32 %p1, %p0\l  tail call void @f_printf(i32 %add)\l  %mul = mul nsw i32 %call3, 912\l  tail call void @f_printf(i32 %mul)\l  %add5 = add nsw i32 %p2, %p1\l  %sub = sub i32 %add5, %call3\l  %mul6 = mul nsw i32 %sub, %call4\l  tail call void @f_printf(i32 %mul6)\l  %add7 = add nsw i32 %p2, %p0\l  %sub8 = sub i32 %add7, %mul\l  %mul9 = mul nsw i32 %sub8, %p1\l  %sub10 = sub i32 %call, %call3\l  %add11 = add i32 %sub10, %mul9\l  tail call void @f_printf(i32 %add11)\l  %sub12 = sub nsw i32 %p1, %p2\l  tail call void @f_printf(i32 %sub12)\l  %sub13 = sub nsw i32 %call2, %call3\l  ret i32 %sub13\l}"];
+}

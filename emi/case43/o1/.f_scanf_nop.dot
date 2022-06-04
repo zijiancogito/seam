@@ -1,0 +1,5 @@
+digraph "CFG for 'f_scanf_nop' function" {
+	label="CFG for 'f_scanf_nop' function";
+
+	Node0x55c9d3d3dcb0 [shape=record,label="{entry:\l  %var0 = alloca i32, align 4\l  %0 = bitcast i32* %var0 to i8*\l  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %0) #5\l  %call = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x\l... i8], [3 x i8]* @.str, i64 0, i64 0), i32* nonnull %var0)\l  %1 = load i32, i32* %var0, align 4, !tbaa !2\l  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %0) #5\l  ret i32 %1\l}"];
+}
