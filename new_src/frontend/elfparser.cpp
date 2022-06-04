@@ -43,7 +43,7 @@ int loadELF(std::string filename) {
 		for (shnum = 0; shnum < elf_header.e_shnum; shnum++ ) {
 			names = shstrtab;
 			names = names + shdr[shnum].sh_name;
-			printf("%s\n", name);
+			printf("%s\n", names);
 		}	
 			
 
