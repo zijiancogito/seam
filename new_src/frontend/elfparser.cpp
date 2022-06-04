@@ -18,7 +18,7 @@ typedef std::pair<std::optional<gtirb::Addr>, std::optional<gtirb::Addr>> DEBUG_
 typedef struct {
 	std::string filename;
 	int line;
-	ADDR addr;
+	INSADDR addr;
 } debug_line;
 
 int loadELF(std::string filename) {
