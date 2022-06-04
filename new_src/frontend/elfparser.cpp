@@ -33,7 +33,7 @@ int loadELF(std::string filename) {
 	if(elf_header.e_ident[0] == 0x7F || elf_header.e_ident[1] == 'E') {
 		int shnum, temp;
 		Elf64_Shdr *shdr = (Elf64_Shdr*)malloc(sizeof(Elf64_Shdr) * elf_header.e_shnum);
-		temp = fseek(fp, elf_header.e_shoff, SEEL_SET);
+		temp = fseek(fp, elf_header.e_shoff, SEEK_SET);
 		temp = fread(shdr, sizeof(Elf64_Shdr) * elf_header.e_shnum, 1, fp);
 		rewind(fp);
 		fseek(fp, shdr[elf_header.e_shstrndx].sh_offset, SEEK_SET);
@@ -85,12 +85,12 @@ int getDebugLineFromReadelf(std::string & filename) {
 		debugs.push_back(g);
 		flag = SUCCESS;
 	}
-
+	std::map<std::string, std::map<int, std::vector<DEBUG_RANGE>>> line2insrange;
 	for (std::vector<debug_line>::iterator s = debugs.begin(); s!= debugs.end(); ++s) {
 		if (s + 1 != debugs.end()){
-			this->line2insrange[s->filename][s->line].push_back(DEBUG_RANGE(s->addr, (s+1)->addr));
+			line2insrange[s->filename][s->line].push_back(DEBUG_RANGE(s->addr, (s+1)->addr));
 		} else {
-			this->line2insrange[s->filename][s->line].push_back(DEBUG_RANGE(s->addr, s->addr));
+			line2insrange[s->filename][s->line].push_back(DEBUG_RANGE(s->addr, s->addr));
 		}
 	}
 
